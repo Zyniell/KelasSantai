@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak — Nama Kamu</title>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">← Kembali</a> |
+      <a href="about.html">Tentang Website</a>
+    </nav>
+  </header>
+
+  <hr>
+  
+  <main>
+    <h1>Form Kontak Lengkap</h1>
+    <p>Isi formulir di bawah ini untuk menghubungi saya.</p>
+
+    <form action="#" method="post">
+
+      <!-- ===== NAMA ===== -->
+      <fieldset>
+        <legend>Identitas Diri</legend>
+
+        <label for="nama">Nama Lengkap <span>*</span></label><br>
+        <input
+          type="text"
+          id="nama"
+          name="nama"
+          placeholder="Masukkan nama lengkap"
+          maxlength="100"
+          required
+        ><br><br>
+
+        <!-- ===== EMAIL ===== -->
+        <label for="email">Alamat Email <span>*</span></label><br>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="contoh@email.com"
+          required
+        ><br><br>
+
+        <!-- ===== TELEPON ===== -->
+        <label for="telepon">Nomor Telepon</label><br>
+        <input
+          type="tel"
+          id="telepon"
+          name="telepon"
+          placeholder="+62 812-3456-7890"
+          pattern="[+0-9\-\s]{8,15}"
+        ><br><br>
+
+        <!-- ===== DROPDOWN 10 KOTA ===== -->
+        <label for="kota">Kota Asal <span>*</span></label><br>
+        <select id="kota" name="kota" required>
+          <option value="" disabled selected>-- Pilih Kota --</option>
+          <option value="jakarta">Jakarta</option>
+          <option value="surabaya">Surabaya</option>
+          <option value="bandung">Bandung</option>
+          <option value="medan">Medan</option>
+          <option value="semarang">Semarang</option>
+          <option value="makassar">Makassar</option>
+          <option value="palembang">Palembang</option>
+          <option value="yogyakarta">Yogyakarta</option>
+          <option value="denpasar">Denpasar</option>
+          <option value="palangkaraya">Palangka Raya</option>
+        </select><br><br>
+
+        <!-- ===== RADIO GENDER ===== -->
+        <label>Jenis Kelamin <span>*</span></label><br>
+        <input type="radio" id="pria" name="gender" value="pria" required>
+        <label for="pria">Pria</label>
+        &nbsp;&nbsp;
+        <input type="radio" id="wanita" name="gender" value="wanita">
+        <label for="wanita">Wanita</label>
+        &nbsp;&nbsp;
+        <input type="radio" id="lainnya" name="gender" value="lainnya">
+        <label for="lainnya">Lainnya</label>
+        <br><br>
+
+      </fieldset>
+
+      <br>
+
+      <!-- ===== CHECKBOX KETERTARIKAN ===== -->
+      <fieldset>
+        <legend>Ketertarikan / Topik yang Ingin Didiskusikan</legend>
+
+        <input type="checkbox" id="webdev" name="ketertarikan" value="webdev">
+        <label for="webdev">Pengembangan Web (Frontend/Backend)</label><br>
+
+        <input type="checkbox" id="mobile" name="ketertarikan" value="mobile">
+        <label for="mobile">Pengembangan Aplikasi Mobile</label><br>
+
+        <input type="checkbox" id="ui" name="ketertarikan" value="ui">
+        <label for="ui">UI/UX Design</label><br>
+
+        <input type="checkbox" id="data" name="ketertarikan" value="data">
+        <label for="data">Data Science &amp; Analitik</label><br>
+
+        <input type="checkbox" id="ai" name="ketertarikan" value="ai">
+        <label for="ai">Kecerdasan Buatan (AI/ML)</label><br>
+
+        <input type="checkbox" id="kolaborasi" name="ketertarikan" value="kolaborasi">
+        <label for="kolaborasi">Kolaborasi Proyek</label><br>
+
+        <input type="checkbox" id="mentoring" name="ketertarikan" value="mentoring">
+        <label for="mentoring">Mentoring &amp; Diskusi Belajar</label><br>
+
+        <input type="checkbox" id="lainnya2" name="ketertarikan" value="lainnya">
+        <label for="lainnya2">Lainnya</label><br>
+
+      </fieldset>
+
+      <br>
+
+      <!-- ===== TEXTAREA PESAN ===== -->
+      <fieldset>
+        <legend>Pesan</legend>
+
+        <label for="pesan">Tulis Pesan Kamu <span>*</span></label><br>
+        <textarea
+          id="pesan"
+          name="pesan"
+          rows="6"
+          cols="50"
+          placeholder="Tuliskan pesan, pertanyaan, atau ide kolaborasi kamu di sini..."
+          maxlength="1000"
+          required
+        ></textarea><br>
+        <small>Maksimal 1000 karakter.</small><br><br>
+
+      </fieldset>
+
+      <br>
+
+      <!-- ===== TOMBOL RESET + SUBMIT ===== -->
+      <button type="reset">🔄 Reset Form</button>
+      &nbsp;&nbsp;
+      <button type="submit">📨 Kirim Pesan</button>
+
+    </form>
+  </main>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2026 Muhammad Muzaki Annadi</p>
+  </footer>
+
+</body>
+</html>

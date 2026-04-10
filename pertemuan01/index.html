@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil — Muhammad Muzaki Annadi</title>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#tentang">Tentang</a> |
+      <a href="#keahlian">Keahlian</a> |
+      <a href="#kontak">Kontak</a> |
+      <a href="about.html">Tentang Website</a> |
+      <a href="kontak.html">Form Kontak Lengkap</a>
+    </nav>
+  </header>
+
+  <hr>
+
+  <main>
+
+    <!-- ======================== TENTANG ======================== -->
+    <section id="tentang">
+      <img src="Photo.png" alt="Foto Profil" width="150">
+      <h1>Muhammad Muzaki Annadi</h1>
+      <h2>Mahasiswa</h2>
+      <p>Saya sangat bersemangat dalam mendalami dunia teknologi</p>
+    </section>
+
+    <!-- ======================== KEAHLIAN ======================== -->
+    <section id="keahlian">
+      <h2>Keahlian</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </section>
+
+    <!-- ======================== PENGALAMAN (ol) ======================== -->
+    <!-- (1) Bagian pengalaman dengan <ol> -->
+    <section id="pengalaman">
+      <h2>Pengalaman</h2>
+      <ol>
+        <li>
+          <strong>Magang Frontend Developer</strong> — PT Maju Bersama<br>
+          <em>Jan 2024 – Jun 2024</em><br>
+          Membangun antarmuka pengguna menggunakan HTML, CSS, dan JavaScript.
+        </li>
+        <li>
+          <strong>Freelance Web Designer</strong> — Proyek Mandiri<br>
+          <em>Jul 2023 – Des 2023</em><br>
+          Merancang dan mengembangkan website untuk klien UMKM lokal.
+        </li>
+        <li>
+          <strong>Asisten Lab Komputer</strong> — Universitas Contoh<br>
+          <em>Agt 2022 – Mei 2023</em><br>
+          Membantu mahasiswa dalam praktikum pemrograman web dasar.
+        </li>
+        <li>
+          <strong>Kontributor Open Source</strong> — GitHub Community<br>
+          <em>2022 – Sekarang</em><br>
+          Berkontribusi pada beberapa repositori publik dalam perbaikan bug dan dokumentasi.
+        </li>
+      </ol>
+    </section>
+
+    <!-- ======================== PORTOFOLIO (tabel 3 kolom) ======================== -->
+    <!-- (2) Tabel portofolio 3 kolom -->
+    <section id="portofolio">
+      <h2>Portofolio</h2>
+      <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Nama Proyek</th>
+            <th>Teknologi</th>
+            <th>Tautan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Golang Projek</td>
+            <td>Golang</td>
+            <td><a href="" target="_blank">Lihat Proyek</a></td>
+          </tr>
+          <tr>
+            <td>ReactJS Projek</td>
+            <td>React, Node.js</td>
+            <td><a href="" target="_blank">Lihat Proyek</a></td>
+          </tr>
+          <tr>
+            <td>Laravel Projek</td>
+            <td>Laravel, PHP</td>
+            <td><a href="" target="_blank">Lihat Proyek</a></td>
+          </tr>
+      </table>
+    </section>
+
+    <br>
+    <a href="files/CV_NamaKamu.pdf" download="CV_NamaKamu.pdf">
+        <button type="button">⬇ Download CV</button>
+    </a>
+
+    <!-- ======================== JADWAL BELAJAR ======================== -->
+    <section id="jadwal">
+      <h2>Jadwal Belajar Mingguan</h2>
+      <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+          <tr>
+            <th rowspan="2">Waktu</th>
+            <th colspan="7">Hari</th>
+          </tr>
+          <tr>
+            <th>Senin</th>
+            <th>Selasa</th>
+            <th>Rabu</th>
+            <th>Kamis</th>
+            <th>Jumat</th>
+            <th>Sabtu</th>
+            <th>Minggu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Pagi</strong><br>(06.00–12.00)</td>
+            <td>HTML &amp; CSS</td>
+            <td>JavaScript</td>
+            <td>HTML &amp; CSS</td>
+            <td>JavaScript</td>
+            <td>Review Materi</td>
+            <!-- Sabtu–Minggu pagi digabung (colspan="2") = Bebas/Istirahat -->
+            <td colspan="2" style="text-align:center;">Bebas / Istirahat</td>
+          </tr>
+          <tr>
+            <td><strong>Siang</strong><br>(12.00–17.00)</td>
+            <td>Latihan Soal</td>
+            <!-- Selasa–Rabu siang digabung (colspan="2") = Proyek Kelompok -->
+            <td colspan="2" style="text-align:center;">Proyek Kelompok</td>
+            <td>Node.js</td>
+            <td>Coding Challenge</td>
+            <td>Proyek Mandiri</td>
+            <td>Istirahat</td>
+          </tr>
+          <tr>
+            <td><strong>Malam</strong><br>(19.00–22.00)</td>
+            <td>React Dasar</td>
+            <td>React Dasar</td>
+            <td>Database SQL</td>
+            <td>Database SQL</td>
+            <!-- Jumat malam hingga Minggu malam digabung (rowspan tidak cocok di sini,
+                 gunakan colspan untuk Sabtu–Minggu) -->
+            <td>Evaluasi Minggu</td>
+            <td colspan="2" style="text-align:center;">Baca Artikel / Dokumen</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <!-- colspan="8" = kolom Waktu + 7 hari -->
+            <td colspan="8">
+              <strong>Catatan:</strong> Jadwal dapat berubah sesuai kebutuhan.
+              Total sesi belajar aktif: ~18 sesi/minggu.
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- ======================== KONTAK ======================== -->
+    <section id="kontak">
+      <h2>Kirim Pesan</h2>
+      <form>
+        <input type="text" placeholder="Nama" required><br>
+        <input type="email" placeholder="Email"><br>
+        <textarea rows="3" placeholder="Pesan..."></textarea><br>
+        <button type="submit">Kirim</button>
+      </form>
+    .</p>
+    </section>
+
+  </main>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2026 Muhammad Muzaki Annadi</p>
+  </footer>
+
+</body>
+</html>
