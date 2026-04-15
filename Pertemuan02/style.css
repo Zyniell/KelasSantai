@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Media Query untuk HP (Layar di bawah 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 40px 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .tombol-grup {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .tombol-utama {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .kartu-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kartu {
+        width: 100%;
+        max-width: none;
+    }
+
+    .kontainer-tentang {
+        flex-direction: column;
+        padding: 0;
+        gap: 30px;
+    }
+
+    .kolom-teks,
+    .kolom-fitur {
+        width: 100%;
+        text-align: center;
+    }
+
+    .list-fitur li {
+        text-align: left;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 30px 20px;
+    }
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #1A1A2E;
+    position: sticky;
+    top: 0;
+    /* menempel atas */
+}
+
+.logo {
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #E94560;
+}
+
+/* HERO */
+.hero {
+    min-height: 60vh;
+    background: #0F3460;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 60px;
+    font-family: sans-serif;
+
+}
+
+.hero-konten {
+    display: flex;
+    flex-direction: column;
+    /* Mengubah arah tumpukan ke bawah */
+    gap: 15px;
+}
+
+.badge {
+    color: white;
+    opacity: 0.7;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    color: white;
+    line-height: 1.1;
+    /* Sesuaikan jarak antar baris */
+}
+
+.highlight {
+    color: #E94560;
+    display: block;
+    /* Ini yang membuat teks turun ke bawah */
+}
+
+.deskripsi {
+    font-size: 18px;
+    color: white;
+    opacity: 0.9;
+    line-height: 1.5;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.tombol-grup {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.tombol-utama {
+    background: #E94560;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    /* Hapus garis bawah link */
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+}
+
+.tombol-kedua {
+    color: #E94560;
+    text-decoration: none;
+    /* Hapus garis bawah link */
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+    /* Persiapan untuk hover effect */
+    transition: all 0.2s ease;
+}
+
+.tombol-kedua:hover {
+    border-bottom: 2px solid #E94560;
+    opacity: 0.8;
+}
+
+/* FITUR */
+.fitur {
+    padding: 80px 60px;
+    background: #16213E;
+    text-align: center;
+}
+
+.kartu-grid {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.kartu {
+    flex: 1;
+    min-width: 220px;
+    max-width: 300px;
+    background: #c6c5c5;
+    border-radius: 12px;
+    padding: 32px;
+    transition: all 0.3s ease;
+}
+
+.kartu:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    background: #253347;
+    cursor: pointer;
+}
+
+.ikon {
+    font-size: 48px;
+}
+
+/* TENTANG KAMI */
+.tentang-kami {
+    padding: 80px 60px;
+    background-color: #0F3460;
+}
+
+.kontainer-tentang {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kolom-teks,
+.kolom-fitur {
+    flex: 1;
+}
+
+.kolom-teks h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #E94560;
+    text-decoration: solid;
+}
+
+.kolom-teks p {
+    line-height: 1.6;
+    font-size: 21px;
+    color: white;
+}
+
+.kolom-fitur h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.list-fitur {
+    list-style: none;
+    padding: 0;
+}
+
+.list-fitur li {
+    background: #E94560;
+    color: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: transform 0.2s;
+}
+
+.list-fitur li:hover {
+    transform: translateX(10px);
+    background: #e9f0f8;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .kontainer-tentang {
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+
+/* FOOTER */
+.footer {
+    background: #0D1117;
+    color: #94A3B8;
+    padding: 32px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sosmed {
+    display: flex;
+    gap: 24px;
+}
+
+.sosmed a {
+    color: #94A3B8;
+    text-decoration: none;
+}
+
+.sosmed a:hover {
+    color: #E94560;
+}
