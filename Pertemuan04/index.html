@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-list Multi-App</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="nav-link active" data-page="todo-page">Todo</a>
+        <a href="#" class="nav-link" data-page="article-page">Artikel</a>
+        <a href="#" class="nav-link" data-page="counter-page">Counter</a>
+        <a href="#" class="nav-link" data-page="github-page">Github</a>
+      </div>
+    </nav>
+
+    <div class="app">
+      
+      <!-- HALAMAN TODO (Default) -->
+      <section id="todo-page" class="page-content">
+        <h1>📝 Todo List</h1>
+        <div class="input-area">
+          <input type="text" id="inputTask" placeholder="Tambah task baru...">
+          <select id="selectPrioritas">
+            <option value="normal">Normal</option>
+            <option value="tinggi">Tinggi</option>
+            <option value="rendah">Rendah</option>
+          </select>
+          <button id="tombolTambah">+ Tambah</button>
+        </div>
+        <button id="selesaikanSemua">✓ Selesaikan Semua</button>
+        <div class="filter-area">
+          <button class="btn-filter aktif" data-filter="semua">Semua</button>
+          <button class="btn-filter" data-filter="aktif">Aktif</button>
+          <button class="btn-filter" data-filter="selesai">Selesai</button>
+        </div>
+        <p id="counter">0 task tersisa</p>
+        <ul id="listTask"></ul>
+      </section>
+
+      <!-- HALAMAN ARTIKEL -->
+      <section id="article-page" class="page-content" style="display:none;">
+        <h1>📰 Artikel</h1>
+        <div id="articleContainer"></div>
+        <button id="muatLebih" class="btn-primary" onclick="muatLebihBanyak()">Muat Lebih Banyak</button>
+      </section>
+
+      <!-- HALAMAN COUNTER -->
+      <section id="counter-page" class="page-content" style="display:none;">
+        <h1>🔢 Counter App</h1>
+        <div class="counter-box">
+          <h2 id="numberDisplay">0</h2>
+          <div class="counter-btns">
+            <button onclick="updateCounterValue(1)">+1</button>
+            <button onclick="updateCounterValue(-1)">-1</button>
+            <button onclick="updateCounterValue('reset')">Reset</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- HALAMAN GITHUB -->
+      <section id="github-page" class="page-content" style="display:none;">
+        <h1>🔍 Github Search</h1>
+        <div class="input-area">
+          <input type="text" id="githubInput" placeholder="Username Github...">
+          <button id="btnSearchGithub" class="btn-primary">Search</button>
+        </div>
+        <div id="githubResult"></div>
+      </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

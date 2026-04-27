@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #0F1629;
+  color: #F0F4F8;
+  padding-bottom: 40px;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #131D2E;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #30363D;
+  margin-bottom: 30px;
+}
+.nav-container {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.nav-link {
+  color: #8B949E;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+.nav-link.active {
+  color: #E94560;
+  border-bottom: 2px solid #E94560;
+}
+
+/* LAYOUT UTAMA */
+.app {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background: #131D2E;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+h1 { font-size: 1.8rem; margin-bottom: 24px; text-align: left; }
+
+/* SHARED UI */
+.input-area { display: flex; gap: 8px; margin-bottom: 16px; }
+input { 
+  flex: 1; padding: 12px; background: #0D1117; 
+  border: 1px solid #30363D; border-radius: 8px; color: white; outline: none; 
+}
+.btn-primary, #tombolTambah {
+  padding: 10px 20px; background: #E94560; color: white; border: none;
+  border-radius: 8px; cursor: pointer; font-weight: bold;
+}
+
+/* COUNTER MENU */
+.counter-box { text-align: center; padding: 20px; }
+#numberDisplay { font-size: 4rem; margin-bottom: 20px; }
+.text-green { color: #4ADE80; }
+.text-red { color: #E94560; }
+.counter-btns { display: flex; gap: 10px; justify-content: center; }
+.counter-btns button {
+  padding: 10px 25px; border-radius: 8px; border: 1px solid #30363D;
+  background: #0D1117; color: white; cursor: pointer;
+}
+
+/* ARTICLE MENU */
+.article-card {
+  background: #0D1117; padding: 15px; border-radius: 8px;
+  margin-bottom: 15px; border: 1px solid #30363D;
+}
+.article-card h3 { color: #E94560; margin-bottom: 10px; text-transform: capitalize; }
+#muatLebih { width: 100%; }
+
+/* GITHUB MENU */
+.github-profile { text-align: center; background: #0D1117; padding: 20px; border-radius: 12px; }
+.github-profile img { width: 100px; border-radius: 50%; margin-bottom: 15px; border: 3px solid #E94560; }
+.github-stats { display: flex; justify-content: space-around; margin-top: 15px; font-size: 0.9rem; color: #8B949E; }
+
+/* TODO SPECIFIC */
+#selesaikanSemua {
+  width: 100%; padding: 12px; background: #1E2A3A; color: #F0F4F8;
+  border: 1px solid #30363D; border-radius: 8px; margin-bottom: 20px; cursor: pointer;
+}
+.filter-area { display: flex; gap: 10px; margin-bottom: 20px; }
+.btn-filter {
+  flex: 1; padding: 10px; background: #0D1117; border: 1px solid #30363D;
+  border-radius: 4px; color: #8B949E; cursor: pointer;
+}
+.btn-filter.aktif { border: 2px solid #E94560; color: white; }
+.task-item {
+  display: flex; justify-content: space-between; padding: 16px;
+  background: #1E2A3A; border: 1px solid #30363D; border-radius: 8px; margin-bottom: 12px;
+}
+.task-item.tinggi { border-left: 5px solid #E94560; }
+.task-item.normal { border-left: 5px solid #30363D; }
+.task-item.rendah { border-left: 5px solid #4ADE80; }
+.task-item.selesai span { text-decoration: line-through; color: #4A5568; }
