@@ -3,28 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator Sederhana</title>
+    <title>Kalkulator Multi-App JS</title>
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
-<div class="kalkulator">
-  <h1>🧮 Kalkulator</h1>
-  
-  <input type="number" id="angka1" placeholder="10">
+<nav class="navbar">
+  <button onclick="showPage('kalkulator-page')">Kalkulator</button>
+  <button onclick="showPage('suhu-page')">Konversi Suhu</button>
+  <button onclick="showPage('fizzbuzz-page')">FizzBuzz</button>
+  <button onclick="showPage('tebak-page')">Tebak Angka</button>
+</nav>
 
-  <select id="operasi">
-    <option value="+">+ Tambah</option>
-    <option value="-">- Kurang</option>
-    <option value="*">× Perkalian</option>
-    <option value="/">÷ Pembagian</option>
-  </select>
+<div class="container">
+  
+  <div id="kalkulator-page" class="page active">
+    <h1>🧮 Kalkulator</h1>
+    <input type="number" id="angka1" placeholder="Angka 1">
+    <select id="operasi">
+      <option value="+">+ Tambah</option>
+      <option value="-">- Kurang</option>
+      <option value="*">× Perkalian</option>
+      <option value="/">÷ Pembagian</option>
+      <option value="%">% Modulus</option>
+    </select>
+    <input type="number" id="angka2" placeholder="Angka 2"> 
+    <button class="btn-primary" onclick="hitung()">Hitung</button>
+    <button class="btn-secondary" onclick="hapus()">Clear</button>
+    <div id="hasil" class="hasil"></div>
+    <div class="riwayat-section">
+      <p class="judul-riwayat">Riwayat Terakhir:</p>
+      <ul id="list-riwayat"></ul>
+    </div>
+  </div>
 
-  <input type="number" id="angka2" placeholder="5"> 
-  
-  <button onclick="hitung()"Hitung</button>
-  
-  <div id="hasil" class="hasil"></div>
+  <div id="suhu-page" class="page">
+    <h1>🌡️ Konversi Suhu</h1>
+    <p style="color: #9CA3AF;">Input Celsius:</p>
+    <input type="number" id="inputCelsius" placeholder="Contoh: 30" oninput="konversiSemua()">
+    <div id="hasilSuhu" class="hasil-list">
+      <p>Fahrenheit: <span id="resF">-</span></p>
+      <p>Kelvin: <span id="resK">-</span></p>
+      <p>Reamur: <span id="resR">-</span></p>
+    </div>
+  </div>
+
+  <div id="fizzbuzz-page" class="page">
+    <h1>🐝 FizzBuzz (1-100)</h1>
+    <button class="btn-primary" onclick="jalankanFizzBuzz()">Generate</button>
+    <div id="container-fizz" class="grid-fizz"></div>
+  </div>
+
+  <div id="tebak-page" class="page">
+    <h1>🎯 Tebak Angka</h1>
+    <p style="color: #9CA3AF;">Tebak angka antara 1 - 100</p>
+    <input type="number" id="tebakanUser" placeholder="Masukkan angka...">
+    <button class="btn-primary" onclick="cekTebakan()">Tebak!</button>
+    <button class="btn-secondary" onclick="resetGame()">Reset Game</button>
+    <div id="pesanTebak" class="hasil"></div>
+    <p id="infoTebak" style="color: #9CA3AF; margin-top: 10px;"></p>
+  </div>
+
 </div>
 
 <script src="script.js"></script>
